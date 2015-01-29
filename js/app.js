@@ -7,11 +7,10 @@ $(function() {
 		block_table_div = block_table.find('li:eq(0) div'),
 		block_table_items = block_table.find('div > a'),
 		slider_down = $('.js-slider__down'),
-		block_table = $('.js-block-table'),
 		menu_button = $('.js-header__menu__open'),
 		menu = $('.js-header__menu');
 
-		$(window).resize(function() {
+	$(window).resize(function() {
 		var
 			width = parseInt(body.width()),
 			height = parseInt(body.height()),
@@ -27,6 +26,10 @@ $(function() {
 					'height': block_table_div.css('height')
 				});
 			});
+		if (width > 1024 && menu.css('display') == 'none')
+		{
+			menu.css('display', 'block');
+		}
 	});
 
 	$(window).resize();
