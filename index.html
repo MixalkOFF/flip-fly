@@ -28,12 +28,12 @@
 	</div>
 	<!-- HEADER LOADBAR END -->
 	<!-- HEADER MENU -->
-	<ul class="header__menu">
-		<li><a href="#">Галерея</a></li>
+	<ul class="header__menu js-header__menu">
+		<li class="is__first"><a href="#">Галерея</a></li>
 		<li><a href="#">Расписание</a></li>
 		<li><a href="#">Акции</a></li>
 		<li><a href="#">Контакты</a></li>
-		<li><a href="#">О нас</a></li>
+		<li class="is__last"><a href="#">О нас</a></li>
 	</ul>
 	<!-- HEADER MENU END -->
 	<!-- MODE -->
@@ -67,7 +67,8 @@
 	<div class="slider">
 		<a href="javascript:void(0);" class="slider__down js-slider__down"></a>
 		<div class="slider__box js-slider">
-			<ul class="cycle-slideshow" data-cycle-slides="li" data-cycle-fx="scrollHorz" data-cycle-speed="1500" data-cycle-pager=".cycle-slideshow-pager">
+			<ul class="cycle-slideshow"
+					data-cycle-slides="li" data-cycle-fx="scrollHorz" data-cycle-speed="1500" data-cycle-pager=".cycle-slideshow-pager" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz">
 				<li>
 					<div style="background-image: url('i/slide1.png');">
 						<span class="slider__title">Батутный<br><span class="slider__title__color">Центр</span></span>
@@ -123,7 +124,6 @@
 </div>
 <!-- WRAPPER END -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/scale.js"></script>
 <script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
