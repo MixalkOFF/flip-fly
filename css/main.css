@@ -98,10 +98,27 @@ a {
 	background: #000;
 	text-align: center;
 }
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.header {
+		position: relative;
+		width: 100%;
+	}
+}
 
 /* HEADER LOGO */
 .header__logo {
 	padding: 9em 0 4em 0;
+}
+.header__logo img {
+	width: 200px;
+}
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.header__logo {
+		padding: 8em 0 4em 0;
+	}
+	.header__logo img {
+		width: 444px;
+	}
 }
 /* HEADER LOGO END */
 
@@ -115,15 +132,43 @@ a {
 	text-align: center;
 	line-height: 2em;
 }
-.header__phone span {
+.header__phone__number {
 	font-size: 2.5em;
+	display: block;
+	margin-bottom: 0.2em;
 }
-.header__phone a {
+.header__phone__title {
 	font-size: 1.3em;
 }
-.header__phone a .fa-share {
+.header__phone__title .fa-share {
 	color: #ea6a20;
 	margin-right: 0.5em;
+}
+.header__phone__menu {
+	background: url(../i/header__phone__menu.png) no-repeat 0 0;
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	right: 40px;
+	display: none;
+}
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.header__phone {
+		position: relative;
+		padding: 0;
+	}
+	.header__phone__number {
+		font-size: 50px;
+		margin-bottom: 0.6em;
+	}
+	.header__phone__title {
+		font-size: 22px;
+	}
+	.header__phone__menu {
+		display: block;
+	}
 }
 /* HEADER PHONE END */
 
@@ -146,6 +191,35 @@ a {
 	left: 0;
 }
 
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.header__loadbar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	.header__loadbar__caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		text-align:center;
+		z-index: 1;
+		height: 42px;
+		line-height: 42px;
+		font-size: 22px;
+		text-transform: lowercase;
+	}
+	.header__loadbar__line {
+		margin: 0;
+		height: 42px;
+		background: url(../i/header__loadbar__ipad.png) repeat 0 0;
+	}
+	.header__loadbar__line__in {
+		height: 42px;
+	}
+}
+
 /* HEADER LOADBAR END*/
 
 /* HEADER MENU */
@@ -162,6 +236,12 @@ a {
 }
 .header__menu li:first-child {
 	margin-top: 0;
+}
+@media all and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.header__menu {
+		display: none;
+		margin-top: 1em;
+	}
 }
 /* HEADER MENU END */
 
