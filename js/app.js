@@ -1,3 +1,24 @@
+var isMobile = {
+	Android: function() {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function() {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function() {
+		return navigator.userAgent.match(/iPhone|iPod/i);
+	},
+	Opera: function() {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function() {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function() {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+
 $(function() {
 
 	var
@@ -17,15 +38,20 @@ $(function() {
 			width = parseInt(body.width()),
 			height = parseInt(body.height()),
 			font_size = (width + height) / 196,
-			list_item_width = block_table_list_item_first.css('width');
+			list_item_width = parseInt(block_table_list_item_first.css('width'));
 			if (font_size > 18) font_size = 18;
 			else if (font_size < 8) font_size = 8;
 			body.css({fontSize: font_size + 'px'});
 			slider.css('height', height);
 			block_table_list_item.each(function() {
-				var $this = $(this);
-				if ($this.hasClass('block__table--lesson')) $this.css('height', (parseInt(list_item_width) * 2) + 'px');
-				else $this.css('height', list_item_width);
+				var
+					$this = $(this),
+					new_item_width = list_item_width;
+				if (isMobile.any())
+				{
+					if ($this.hasClass('block__table--lesson')) new_item_width = new_item_width * 2;
+				}
+				$this.css('height', new_item_width + 'px');
 			});
 			block_table_items.each(function() {
 				$(this).css({
