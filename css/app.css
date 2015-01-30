@@ -577,6 +577,11 @@ a {
 	height: 96px;
 	margin: -48px 0 0 -48px;
 }
+@media all and (max-width: 680px), all and (max-device-width: 680px) {
+	.block__table div > a {
+		font-size: 1.5em;
+}
+}
 /* BLOCK TABLE END */
 
 /* FOOTER */
@@ -614,5 +619,10 @@ a {
 }
 .footer__copyright a {
 	color: #b6b6b6;
+}
+@media all and (max-width: 680px), all and (max-device-width: 680px) {
+	.footer__copyright {
+		font-size: 0.9em;
+	}
 }
 /* FOOTER END */
