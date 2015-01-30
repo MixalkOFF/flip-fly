@@ -622,7 +622,11 @@ a {
 }
 @media all and (max-width: 680px), all and (max-device-width: 680px) {
 	.footer__copyright {
-		font-size: 0.9em;
+		font-size: 1em;
+		padding: 0 3em 0 0;
+	}
+	.footer__social {
+		padding: 0 0 0 3em;
 	}
 }
 /* FOOTER END */
