@@ -252,6 +252,17 @@ a {
 .header__menu li:first-child {
 	margin-top: 0;
 }
+.header__menu a {
+	display: inline-block;
+	border-bottom: 1px solid transparent;
+	-webkit-transition: border .4s ease;
+	-moz-transition: border .4s ease;
+	-o-transition: border .4s ease;
+	transition: border .4s ease;
+}
+.header__menu a:hover {
+	border-bottom: 1px solid #fff;
+}
 @media all and (max-width : 1024px) {
 	.header__menu {
 		display: none;
@@ -554,25 +565,42 @@ a {
 	text-transform: uppercase;
 	text-align: center;
 	overflow: hidden;
+	-webkit-transition: border .4s ease;
+	-moz-transition: border .4s ease;
+	-o-transition: border .4s ease;
+	transition: border .4s ease;
 }
-.block__table--blue > div{
+.block__table li > div:hover {
+	border: 3px solid #ddd;
+}
+.block__table--blue > div {
 	background: url('../i/block__table-img-blue.png') repeat 0 0;
+}
+.block__table--blue a {
 	color: #404040;
 }
 .block__table--orange > div {
 	background: url('../i/block__table-img-orange.png') repeat 0 0;
+}
+.block__table--orange a {
 	color: #fff;
 }
 .block__table--black > div {
 	background: url('../i/block__table-img-black.png') repeat 0 0;
+}
+.block__table--black a {
 	color: #fff;
 }
 .block__table--white > div {
 	background: url('../i/block__table-img-white.png') repeat 0 0;
+}
+.block__table--white a {
 	color: #404040;
 }
 .block__table--lesson {
 	background: #75c9dc;
+}
+.block__table--lesson a {
 	color: #404040;
 }
 .block__table div > a {
@@ -647,6 +675,14 @@ a {
 }
 .footer__copyright a {
 	color: #b6b6b6;
+	border-bottom: 1px solid transparent;
+	-webkit-transition: border .4s ease;
+	-moz-transition: border .4s ease;
+	-o-transition: border .4s ease;
+	transition: border .4s ease;
+}
+.footer__copyright a:hover {
+	border-bottom: 1px solid #b6b6b6;
 }
 @media all and (max-width: 680px), all and (max-device-width: 680px) {
 	.footer__copyright {
