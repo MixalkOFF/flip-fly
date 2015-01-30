@@ -514,6 +514,14 @@ a {
 		font-size: 11px;
 	}
 }
+@media all and (max-device-width: 680px) and ((orientation : portrait) {
+	.slider__title {
+		top: 120px;
+	}
+	.slider__caption {
+		top: 200px;
+	}
+}
 /* SLIDER END */
 
 /* BLOCK TABLE */
