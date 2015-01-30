@@ -1,24 +1,3 @@
-var isMobile = {
-	Android: function() {
-		return navigator.userAgent.match(/Android/i);
-	},
-	BlackBerry: function() {
-		return navigator.userAgent.match(/BlackBerry/i);
-	},
-	iOS: function() {
-		return navigator.userAgent.match(/iPhone|iPod/i);
-	},
-	Opera: function() {
-		return navigator.userAgent.match(/Opera Mini/i);
-	},
-	Windows: function() {
-		return navigator.userAgent.match(/IEMobile/i);
-	},
-	any: function() {
-		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-	}
-};
-
 $(function() {
 
 	var
@@ -47,7 +26,7 @@ $(function() {
 				var
 					$this = $(this),
 					new_item_width = list_item_width;
-				if (isMobile.any())
+				if (app.isMobile.any())
 				{
 					if ($this.hasClass('block__table--lesson')) new_item_width = new_item_width * 2;
 				}

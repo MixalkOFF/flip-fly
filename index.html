@@ -3,14 +3,36 @@
 <head>
 	<meta charset="utf-8" />
 	<script type="text/javascript">
-	if (navigator.userAgent.match(/Android/i)
-	|| navigator.userAgent.match(/webOS/i)
-	|| navigator.userAgent.match(/iPhone/i)
-	|| navigator.userAgent.match(/iPod/i)
-	|| navigator.userAgent.match(/BlackBerry/i)
-	|| navigator.userAgent.match(/Windows Phone/i)) {
-		document.write('<meta name="viewport" content="width=520" />');
-	}
+		var app = {
+			isMobile: {
+				Android: function() {
+					return navigator.userAgent.match(/Android/i);
+				},
+				BlackBerry: function() {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+				iOS: function() {
+					return navigator.userAgent.match(/iPhone|iPod/i);
+				},
+				Opera: function() {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+				Windows: function() {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+				any: function() {
+					return (app.isMobile.Android()
+					|| app.isMobile.BlackBerry()
+					|| app.isMobile.iOS()
+					|| app.isMobile.Opera()
+					|| app.isMobile.Windows());
+				}
+			}
+		};
+		if (app.isMobile.any())
+		{
+			document.write('<meta name="viewport" content="width=520" />');
+		}
 	</script>
 	<title>Flip&Fly</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
@@ -146,9 +168,20 @@
 <!-- WRAPPER END -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle2.swipe.js"></script>
-<script type="text/javascript" src="js/ios6fix.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript">
+	if (app.isMobile.any())
+	{
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'js/jquery.cycle2.swipe.js';
+		document.body.appendChild(script);
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = 'js/ios6fix.js';
+		document.body.appendChild(script);
+	}
+</script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
