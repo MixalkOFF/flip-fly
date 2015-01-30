@@ -70,6 +70,9 @@ html, body {
 	font-family: 'Open Sans';
 	color: #fff;
 }
+body.mobile {
+	font-family: 'Helvetica';
+}
 a {
 	text-decoration: none;
 	color: #fff;
@@ -152,7 +155,7 @@ a {
 	margin-right: 0.5em;
 }
 .header__phone__menu {
-	background: url(../i/header__phone__menu.png) no-repeat 0 0;
+	background: url("../i/header__phone__menu.png") no-repeat 0 0;
 	background-size: cover;
 	width: 60px;
 	height: 60px;
