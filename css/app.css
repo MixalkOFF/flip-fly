@@ -514,7 +514,7 @@ a {
 		font-size: 11px;
 	}
 }
-@media all and (max-device-width: 680px) and ((orientation : portrait) {
+@media all and (max-device-width: 680px) and (orientation : portrait) {
 	.slider__title {
 		top: 120px;
 	}
@@ -537,7 +537,6 @@ a {
 }
 .block__table li {
 	width: 33.3333%;
-	height: 33.3333%;
 	display: block;
 	float: left;
 	background-position: 50% 50%;
@@ -597,8 +596,15 @@ a {
 @media all and (max-width: 680px), all and (max-device-width: 680px) {
 	.block__table div > a {
 		font-size: 1.5em;
+	}
+	.block__table li {
+		width: 50%;
+	}
+	.block__table--lesson {
+		width: 100% !important;
+	}
 }
-}
+
 /* BLOCK TABLE END */
 
 /* FOOTER */

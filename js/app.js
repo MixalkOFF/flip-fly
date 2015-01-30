@@ -4,6 +4,8 @@ $(function() {
 		body = $('body'),
 		slider = $('.js-slider'),
 		block_table = $('.js-block-table'),
+		block_table_list_item_first = block_table.find('li:eq(0)'),
+		block_table_list_item = block_table.find('li'),
 		block_table_div = block_table.find('li:eq(0) div'),
 		block_table_items = block_table.find('div > a'),
 		slider_down = $('.js-slider__down'),
@@ -14,12 +16,17 @@ $(function() {
 		var
 			width = parseInt(body.width()),
 			height = parseInt(body.height()),
-			font_size = (width + height) / 196;
+			font_size = (width + height) / 196,
+			list_item_width = block_table_list_item_first.css('width');
 			if (font_size > 18) font_size = 18;
 			else if (font_size < 8) font_size = 8;
 			body.css({fontSize: font_size + 'px'});
 			slider.css('height', height);
-			block_table.css('height', block_table.css('width'));
+			block_table_list_item.each(function() {
+				var $this = $(this);
+				if ($this.hasClass('block__table--lesson')) $this.css('height', (parseInt(list_item_width) * 2) + 'px');
+				else $this.css('height', list_item_width);
+			});
 			block_table_items.each(function() {
 				$(this).css({
 					'width': block_table_div.css('width'),
