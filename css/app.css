@@ -497,6 +497,14 @@ a {
 		font-size: 18px;
 	}
 }
+@media all and (max-width: 680px), all and (max-device-width: 680px) {
+	.slider__title {
+		font-size: 3em;
+	}
+	.slider__caption {
+		font-size: 14px;
+	}
+}
 /* SLIDER END */
 
 /* BLOCK TABLE */
