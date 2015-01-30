@@ -514,12 +514,13 @@ a {
 		font-size: 11px;
 	}
 }
-@media all and (max-device-width: 680px) and (orientation : portrait) {
+@media all and (max-device-width: 680px) and (orientation: landscape) {
 	.slider__title {
-		top: 120px;
+		top: 40px;
 	}
 	.slider__caption {
-		top: 200px;
+		top: 140px;
+		font-size: 10px;
 	}
 }
 /* SLIDER END */
