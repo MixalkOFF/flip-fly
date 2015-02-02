@@ -71,7 +71,7 @@ app.handlers =
 				height = app.i.block_table_first_div.css('height');
 			if (app.i.body_width < 680)
 			{
-				if ($this.parents('li').hasClass('block__table--lesson'))
+				if ($this.parents('li').hasClass('js-block-table-lesson'))
 				{
 					width = $this.parent('div').css('width');
 					height = $this.parent('div').css('height');
@@ -112,7 +112,7 @@ app.init = function()
 	app.i.block_table_first_item = app.i.block_table.find('li:eq(0)');
 	app.i.block_table_items = app.i.block_table.find('li');
 	app.i.block_table_first_div = app.i.block_table_first_item.find('div');
-	app.i.block_table_anchors = app.i.block_table_items.find('a');
+	app.i.block_table_anchors = app.i.block_table_items.find('.js-anchor');
 	if (app.isMobile.any()) app.i.body.addClass('mobile');
 	app.handlers.init();
 };
