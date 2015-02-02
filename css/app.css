@@ -606,6 +606,61 @@ a {
 .block__table--lesson a {
 	color: #404040;
 }
+.block__table--lesson div > a {
+	vertical-align: top !important;
+	box-sizing: border-box;
+	position: relative;
+}
+.block__table--lesson--in {
+	position: absolute;
+	width: 100%;
+	padding-top: 0.5em;
+}
+.block__table--lesson--in img {
+	width: 5.4em;
+}
+.block__table--lesson--item1{
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+.block__table--lesson--item2{
+	display: inline-block;
+	width: 50%;
+}
+.lesson__title {
+	font-size: 30px;
+	color: #404040;
+}
+.lesson__time {
+	width: 13.33em;
+	height: 3em;
+	font-size: 15px;
+	margin: 0 auto;
+	background: #404040;
+	color: #fff;
+}
+.lesson__caption {
+	width: 13.33em;
+	height: 5em;
+	background: #fff;
+	font-size: 15px;
+	margin: 0 auto;
+}
+.lesson__hall {
+	width: 13.333em;
+	height: 2em;
+	background: #fff;
+	font-size: 15px;
+	margin: 0 auto;
+}
+.lesson__schedule {
+	height: 2em;
+	font-size: 15px;
+	margin-top: 24em;
+	background: #404040;
+	color: #fff;
+}
 .block__table div > a {
 	display: table-cell;
 	vertical-align: middle;
@@ -624,6 +679,10 @@ a {
 	width: 96px;
 	height: 96px;
 	margin: -48px 0 0 -48px;
+}
+.table__lesson__anchor {
+	background: #aaa;
+	position: absolute;
 }
 @media all and (max-width: 680px), all and (max-device-width: 680px) {
 	.block__table div > a {
