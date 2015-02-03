@@ -725,6 +725,15 @@ a {
 	background: #aaa;
 	position: absolute;
 }
+.block__table__time {
+	font-size: 15px;
+	font-weight: 500;
+}
+@media all and (max-width : 1024px) {
+	.block__table__hide {
+		display: none !important;
+	}
+}
 @media all and (max-width: 680px), all and (max-device-width: 680px) {
 	.block__table div > a {
 		font-size: 1.5em;
@@ -750,9 +759,71 @@ a {
 	.lesson__schedule {
 		font-size: 2.4em !important;
 	}
+	.block__table__show {
+		display: block !important;
+	}
 }
 
 /* BLOCK TABLE END */
+
+/* GALLERY */
+.gallery__page__title {
+	height: 10em;
+	background: #1d1d1d;
+	font-weight: 800;
+}
+.gallery__page__title__caption {
+	font-size: 4em;
+	padding: 0.5em;
+}
+.gallery__head {
+	height: 50em;
+}
+.gallery__head__first {
+	background: url('../i/gallery/gallery__head__first.jpg') no-repeat 0 0;
+	height: 100%;
+	float: left;
+	width: 66.66%;
+	box-sizing: border-box;
+	background-size: cover;
+}
+.gallery__head__right {
+	height: 100%;
+	width: 33.33%;
+	float: right;
+	box-sizing: border-box;
+}
+.gallery__head__right__in {
+	width: 100%;
+	height: 50%;
+	float: right;
+}
+.gallery__head__right__in img {
+	width: 100%;
+	height: 100%;
+}
+@media all and (max-width: 1024px) {
+	.gallery__head {
+		height: 56em;
+	}
+}
+@media all and (max-width: 680px), all and (max-device-width: 680px) {
+	.gallery__head__first {
+		width: 100%;
+	}
+	.gallery__head__right {
+		width: 100%;
+		display: inline-block;
+		float: none;
+	}
+	.gallery__head__right__in {
+		width: 50%;
+	}
+	.block__table__gallery {
+		padding-top: 28em;
+	}
+}
+/* GALLERY END */
 
 /* FOOTER */
 .footer {

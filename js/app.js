@@ -120,3 +120,10 @@ app.init = function()
 $(function() {
 	app.init();
 });
+
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});

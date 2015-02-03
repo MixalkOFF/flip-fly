@@ -37,6 +37,8 @@
 	<title>Flip&Fly</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css" />
 </head>
 <body>
 <!-- HEADER -->
@@ -100,8 +102,34 @@
 <!-- WRAPPER -->
 <div class="wrapper">
 	<!-- CONTENT -->
-	
-	
+	<div class="gallery__page__title">
+		<div class="gallery__page__title__caption">Фотогалереи</div>
+	</div>
+	<div class="gallery__head">
+		<a class="gallery__head__first fancybox" rel='gallery' href="i/gallery/gallery__head__first.jpg"></a>
+		<div class="gallery__head__right">
+			<div class="gallery__head__right__in">
+				<a class="gallery__head__right__1 fancybox" rel='gallery' href="i/gallery/gallery__head__right__1.jpg">
+					<img src="i/gallery/gallery__head__right__1.jpg">
+				</a>
+			</div>
+			<div class="gallery__head__right__in">
+				<a class="gallery__head__right__2 fancybox" rel='gallery' href="i/gallery/gallery__head__right__2.jpg">
+					<img src="i/gallery/gallery__head__right__2.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="block__table block__table__gallery">
+		<ul class="js-block-table">
+			<li style="background-image: url('i/gallery/gallery__menu__1.jpg');" class="block__table--black"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+			<li style="background-image: url('i/gallery/gallery__menu__2.jpg');" class="block__table--black"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+			<li style="background-image: url('i/gallery/gallery__menu__3.jpg');" class="block__table--black"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+			<li style="background-image: url('i/gallery/gallery__menu__1.jpg');" class="block__table--black block__table__hide block__table__show"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+			<li style="background-image: url('i/gallery/gallery__menu__2.jpg');" class="block__table--black block__table__hide"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+			<li style="background-image: url('i/gallery/gallery__menu__3.jpg');" class="block__table--black block__table__hide"><div><a href="#" class="js-anchor">название галереи</br><span class="block__table__time">22/12/2014<span></a></div></li>
+		</ul>
+	</div>
 	<!-- CONTENT END -->
 	<div class="clear"></div>
 <!-- FOOTER -->
@@ -125,6 +153,10 @@
 <script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle2.swipe.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="js/ios6fix.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
