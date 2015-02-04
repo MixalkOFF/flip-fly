@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		var app = {
+			isMobile: {
+				Android: function() {
+					return navigator.userAgent.match(/Android/i);
+				},
+				BlackBerry: function() {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+				iOS: function() {
+					return navigator.userAgent.match(/iPhone|iPod/i);
+				},
+				Opera: function() {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+				Windows: function() {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+				any: function() {
+					return (app.isMobile.Android()
+					|| app.isMobile.BlackBerry()
+					|| app.isMobile.iOS()
+					|| app.isMobile.Opera()
+					|| app.isMobile.Windows());
+				}
+			}
+		};
+		if (app.isMobile.any())
+		{
+			document.write('<meta name="viewport" content="width=520" />');
+		}
+	</script>
+	<title>Flip&Fly</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css" />
+</head>
+<body>
+<!-- HEADER -->
+<div class="header">
+	<!-- HEADER LOGO -->
+	<div class="header__logo">
+		<a href="#">
+			<img src="i/logo.png" alt="Flip&Fly" />
+		</a>
+	</div>
+	<!-- HEADER LOGO END -->
+	<!-- HEADER PHONE -->
+	<div class="header__phone">
+		<span class="header__phone__number">+7 (495) 2150269<a href="tel:84952150269"></a></span>
+		<a href="javascript:void(0);" class="header__phone__title js-popup-open"><i class="fa fa-share"></i>обратный звонок</a>
+		<a href="javascript:void(0);" class="header__phone__menu js-header-menu-open"></a>
+	</div>
+	<!-- HEADER PHONE END -->
+	<!-- HEADER LOADER -->
+	<div class="header__loader">
+		<div class="header__loader__caption">Сейчас центр загружен на 75%</div>
+		<div class="header__loader__line">
+			<div class="header__loader__line__in"></div>
+		</div>
+	</div>
+	<!-- HEADER LOADER END -->
+	<!-- HEADER MENU -->
+	<ul class="header__menu js-header-menu">
+		<li class="is__first"><a href="#">Галерея</a></li>
+		<li><a href="#">Расписание</a></li>
+		<li><a href="#">Акции</a></li>
+		<li><a href="#">Контакты</a></li>
+		<li class="is__last"><a href="#">О нас</a></li>
+	</ul>
+	<!-- HEADER MENU END -->
+	<!-- MODE -->
+	<div class="mode">
+		<span class="mode__caption"><i class="fa fa-map-marker"></i>Москва, Высоковольтный проезд 1/49</span>
+		<div class="mode__box">
+			<div class="mode__time">
+				<div class="mode__time__day">пн<br>пт</div>
+				<div class="mode__number"><span>1</span></div>
+				<div class="mode__number"><span>0</span></div>
+				<div class="mode__time__dash">&nbsp;</div>
+				<div class="mode__number"><span>2</span></div>
+				<div class="mode__number"><span>0</span></div>
+			</div>
+			<div class="mode__time mode__time--bg">
+				<div class="mode__time__day">сб<br>вс</div>
+				<div class="mode__number"><span>1</span></div>
+				<div class="mode__number"><span>0</span></div>
+				<div class="mode__time__dash">&nbsp;</div>
+				<div class="mode__number"><span>2</span></div>
+				<div class="mode__number"><span>2</span></div>
+			</div>
+		</div>
+	</div>
+	<!-- MODE END -->
+</div>
+<!-- HEADER END -->
+<!-- WRAPPER -->
+<div class="wrapper">
+	<!-- CONTENT -->
+	<div class="gallery__page__title">
+		<div class="gallery__page__title__caption">harley davidson</div>
+	</div>
+	<div class="slider cycle-slideshow">
+		<div class="slider__box js-slider">
+			<ul class="cycle-slideshow"
+					data-cycle-slides="li"
+					data-cycle-fx="scrollHorz"
+					data-cycle-timeout="0"
+					data-cycle-prev=".cycle-prev"
+					data-cycle-next=".cycle-next">
+				<li>
+					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
+				</li>
+				<li>
+					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
+				</li>
+				<li>
+					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
+				</li>
+			</ul>
+			<div class="center">
+				<div class="cycle-prev" id="prev"></div>
+				<div class="cycle-next" id="next"></div>
+			</div>
+		</div>
+	</div>
+	<div class="gallery__photo slideshow"
+				data-cycle-fx='carousel'
+				data-cycle-timeout='1000'>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
+			<img src="i/gallery/1.jpg">
+		</a></div>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
+			<img src="i/gallery/2.jpg">
+		</a></div>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/3.jpg">
+			<img src="i/gallery/3.jpg">
+		</a></div>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/4.jpg">
+			<img src="i/gallery/4.jpg">
+		</a></div>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/5.jpg">
+			<img src="i/gallery/5.jpg">
+		</a></div>
+		<div><a class="fancybox" rel='gallery' href="i/gallery/6.jpg">
+			<img src="i/gallery/6.jpg">
+		</a></div>
+		<div class="gallery__photo__hide">
+			<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
+				<img src="i/gallery/1.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
+				<img src="i/gallery/2.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/3.jpg">
+				<img src="i/gallery/3.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/4.jpg">
+				<img src="i/gallery/4.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/5.jpg">
+				<img src="i/gallery/5.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/6.jpg">
+				<img src="i/gallery/6.jpg">
+			</a></div>
+		</div>
+		<div class="gallery__photo__show__iphone">
+			<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
+				<img src="i/gallery/1.jpg">
+			</a></div>
+			<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
+				<img src="i/gallery/2.jpg">
+			</a></div>
+		</div>
+	</div>
+	<!-- CONTENT END -->
+	<div class="clear"></div>
+<!-- FOOTER -->
+	<div class="footer">
+		<ul class="footer__social">
+			<li><a href="#"><img src="i/social1.png"></a></li>
+			<li><a href="#"><img src="i/social2.png"></a></li>
+			<li><a href="#"><img src="i/social3.png"></a></li>
+			<li><a href="#"><img src="i/social4.png"></a></li>
+		</ul>
+		<div class="footer__copyright">
+			<div class="footer__copyright__in">
+				Copyright 2014 by Flip&amp;Fly<span></span>Разработка сайта: <a href="#">advcreative</a>
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER END -->
+</div>
+<!-- WRAPPER END -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.carousel.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.swipe.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/ios6fix.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
