@@ -1079,7 +1079,7 @@ p {
 	font-weight: 600;
 }
 .form__line--button {
-	padding-right: 2em;
+	margin-right: 2em;
 }
 .contact__map {
 	margin-bottom: -4px;
