@@ -97,6 +97,9 @@ p {
 	content: '';
 	clear: both;
 }
+.none__border {
+	border: none !important;
+}
 @media all and (max-width: 1024px) {
 	.wrapper {
 		padding: 0;
@@ -995,6 +998,156 @@ p {
 	font-weight: 600;
 }
 /* TYPOGRAPHY END */
+
+/* CONTACTS */
+.contact__title {
+	padding: 40px;
+	color: #000;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.contact {
+	color: #000;
+	width: 33.333%;
+	float: left;
+	padding: 0 0 4em 4em;
+}
+.contact__in {
+	padding: 10px 0;
+	border-bottom: 1px solid #e9e9e9 ;
+}
+.contact__small {
+	font-weight: 600;
+}
+.contact__bold {
+	font-size: 20px;
+	font-weight: 600;
+}
+.contact__social {
+	padding-top: 2em;
+}
+.contact__social div{
+	display: inline-block;
+	padding-right: 2em;
+}
+.form {
+	float: right;
+	width: 60%;
+	color: #000;
+}
+.form label{
+	display: block;
+}
+.form input{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-top: 26px;
+	font-weight: normal;
+	border: 3px solid #e9e9e9;
+	border-radius: 5px;
+	color: #5a5a5a;
+	resize: none;
+}
+.form__line {
+	width: 33%;
+	line-height: 4;
+	float: left;
+}
+.form__message {
+	float: right;
+	width: 60%;
+	margin-right: 2em;
+}
+.form__message__block {
+	height: 13em;
+}
+.form button {
+	width: 100%;
+	font-size: 18px;
+	display: inline-block;
+	padding: 12px 20px;
+	color: #fff;
+	cursor: pointer;
+	background: #75c9db;
+	border-radius: 3px;
+	border: none;
+	margin-top: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.form__line--button {
+	padding-right: 2em;
+}
+.contact__map {
+	margin-bottom: -4px;
+}
+.contact__map img {
+	width: 100%;
+	height: 100%;
+}
+.contact__hide {
+	display: none;
+}
+@media all and (max-width : 1024px) {
+	.contact__title {
+		display: none;
+	}
+	.contact {
+		display: none;
+	}
+	.contact__bold {
+		margin-left: 1em;
+	}
+	.form {
+		float: left;
+		width: 100%;
+		margin: 4em 0;
+	}
+	.form__line {
+		margin-left: 2em;
+	}
+	.form__line--button {
+		padding-left: 2em;
+	}
+	.contact__social__caption {
+		color: #000;
+		float: left;
+		padding-left: 2em;
+	}
+	.contact__social__caption  span{
+		font-size: 4em;
+	}
+	.contact__social {
+		padding: 0 0 4em 1em;
+		margin-left: 60em;
+	}
+	.contact__hide {
+		display: block;
+	}
+}
+@media all and (max-width: 680px), all and (max-device-width: 680px) {
+	.form__message {
+		float: none;
+		width: 90%;
+		padding-left: 2em;
+	}
+	.form__line {
+		float: none;
+		width: 90%;
+	}
+	.form button {
+		width: 95%;
+	}
+	.contact__social {
+		float: none;
+		margin: 1em 0 0 1em;
+		float: left;
+	}
+}
+/* CONTACTS END */
 
 /* FOOTER */
 .footer {
