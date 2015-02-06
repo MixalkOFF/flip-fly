@@ -892,7 +892,7 @@ p {
 	padding-bottom: 10px;
 }
 .direction {
-	height: 25em;
+	height: 30em;
 } 
 .direction__img {
 	background: url('../i/direction__img.jpg') no-repeat 0 0;
@@ -967,6 +967,9 @@ p {
 .price__table__caption {
 	text-transform: uppercase;
 	font-weight: 700;
+}
+.price__table .fa-external-link-square {
+	padding-left: 0.5em;
 }
 .info {
 	height: 25em;
