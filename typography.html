@@ -37,8 +37,6 @@
 	<title>Flip&Fly</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css" />
 </head>
 <body>
 <!-- HEADER -->
@@ -138,14 +136,14 @@
 		<div class="direction__in">
 			<div class="direction__title">направления тренировок</div>
 			<ul class="direction__item">
-				<li><i class="fa fa-square">1</i>BMX</li>
-				<li><i class="fa fa-square">2</i>Детская акробатическая подготовка</li>
-				<li><i class="fa fa-square">3</i>Акробатическая подготовка</li>
-				<li><i class="fa fa-square">4</i>Тренировка для потери веса</li>
-				<li><i class="fa fa-square">5</i>Акробатика для новичков и любителей</li>
-				<li><i class="fa fa-square">6</i>Акробатика для профессионалов</li>
-				<li><i class="fa fa-square">7</i>Тренировка сноубордистов</li>
-				<li><i class="fa fa-square">8</i>Техническая подготовка вейкбордистов</li>
+				<li><i class="fa fa-square"></i>BMX</li>
+				<li><i class="fa fa-square"></i>Детская акробатическая подготовка</li>
+				<li><i class="fa fa-square"></i>Акробатическая подготовка</li>
+				<li><i class="fa fa-square"></i>Тренировка для потери веса</li>
+				<li><i class="fa fa-square"></i>Акробатика для новичков и любителей</li>
+				<li><i class="fa fa-square"></i>Акробатика для профессионалов</li>
+				<li><i class="fa fa-square"></i>Тренировка сноубордистов</li>
+				<li><i class="fa fa-square"></i>Техническая подготовка вейкбордистов</li>
 			</ul>
 		</div>
 	</div>
@@ -180,15 +178,27 @@
 		</table>
 	</div>
 	<div class="typography__gallery">
-		<a class="fancybox" rel='gallery' href="i/gallery/gallery__head__right__1.jpg">
-					<img src="i/gallery/gallery__head__right__1.jpg">
-		</a>
-		<a class="fancybox" rel='gallery' href="i/gallery/gallery__head__right__1.jpg">
-					<img src="i/gallery/gallery__head__right__1.jpg">
-		</a>
-		<a class="fancybox" rel='gallery' href="i/gallery/gallery__head__right__1.jpg">
-					<img src="i/gallery/gallery__head__right__1.jpg">
-		</a>
+		<div class="slider cycle-slideshow">
+		<div class="slider__box slider__box__typography js-slider-typography">
+			<ul class="cycle-slideshow"
+					data-cycle-slides="li"
+					data-cycle-fx="carousel"
+					data-cycle-timeout="0"
+					data-cycle-prev=".cycle-prev"
+					data-cycle-next=".cycle-next"
+    data-cycle-carousel-fluid=true
+    data-cycle-carousel-visible=3>
+				<li style="background-image: url('i/typography__gallery.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/typography__gallery2.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/typography__gallery3.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/typography__gallery.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/typography__gallery2.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/typography__gallery3.jpg');" class="slider__box__in"></li>
+			</ul>
+			<a href="javascript:void(0);" class="cycle-prev slider__button"></a>
+			<a href="javascript:void(0);" class="cycle-next slider__button"></a>
+		</div>
+	</div>
 	</div>
 	<div class="info">
 		<div class="info__in">
@@ -221,10 +231,7 @@
 <script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle2.swipe.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/cycle2.carousel.min.js"></script>
 <script type="text/javascript" src="js/ios6fix.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>

@@ -536,7 +536,22 @@ p {
 	z-index: 100;
 	margin-top: -78px;
 }
-
+.slider__box__typography li {
+	position: relative !important;
+}
+.slider__box__typography li:after {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url('../i/block__table-img-black.png') repeat 0 0;
+}
+.slider__box__typography li.cycle-slide-active+li:after {
+	background: none;
+}
 @media all and (max-width : 1024px) {
 	.slider .cycle-slideshow-pager {
 		display: none;
@@ -1011,7 +1026,7 @@ p {
 	text-align: center;
 	float: left;
 	color: #000;
-	line-height: 6em;
+	line-height: 8em;
 }
 .info__in a {
 	color: #EA6A20;

@@ -5,6 +5,8 @@ app.i =
 	body_height: 0,
 	body_font_size: 10,
 	slider: {},
+	slider_typography: {},
+	slider_typography_li: {},
 	slider_down: {},
 	menu: {},
 	menu_button: {},
@@ -35,6 +37,7 @@ app.handlers =
 			app.handlers.bodyHandler();
 			app.handlers.headerMenuHandler();
 			app.handlers.sliderHandler();
+			app.handlers.sliderTypographyHandler();
 			app.handlers.blockTableHandler();
 			app.handlers.galleryImageHandler();
 			app.handlers.galleryPhotoHandler();
@@ -58,6 +61,14 @@ app.handlers =
 	{
 		if (app.i.body_width > 680) app.i.slider.css('height', app.i.body_height);
 		else app.i.slider.css('height', app.i.body_height / 2);
+	},
+	sliderTypographyHandler: function()
+	{
+		var width = parseInt(app.i.slider_typography.css('width'))/3;
+		if (app.i.body_width > 680) app.i.slider_typography_li.css({
+			height: width + 'px',
+			width: width + 'px'
+		});
 	},
 	galleryImageHandler: function()
 	{
@@ -157,6 +168,8 @@ app.init = function()
 {
 	app.i.body = $('body');
 	app.i.slider = $('.js-slider');
+	app.i.slider_typography = $('.js-slider-typography');
+	app.i.slider_typography_li = app.i.slider_typography.find('li');
 	app.i.slider_down = $('.js-slider-down');
 	app.i.menu = $('.js-header-menu');
 	app.i.menu_button = $('.js-header-menu-open');
