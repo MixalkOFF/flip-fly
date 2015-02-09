@@ -37,8 +37,6 @@
 	<title>Flip&Fly</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css" />
 </head>
 <body>
 <!-- HEADER -->
@@ -112,71 +110,40 @@
 					data-cycle-fx="scrollHorz"
 					data-cycle-timeout="0"
 					data-cycle-prev=".cycle-prev"
-					data-cycle-next=".cycle-next">
-				<li>
-					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
-				</li>
-				<li>
-					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
-				</li>
-				<li>
-					<div class="slider__box__in" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></div>
-				</li>
+					data-cycle-next=".cycle-next"
+					data-cycle-pager=".js-gallery-photo-pager"
+					data-cycle-pager-template="">
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
 			</ul>
-			<div class="center">
-				<div class="cycle-prev" id="prev"></div>
-				<div class="cycle-next" id="next"></div>
-			</div>
+			<a href="javascript:void(0);" class="cycle-prev slider__button"></a>
+			<a href="javascript:void(0);" class="cycle-next slider__button"></a>
 		</div>
 	</div>
-	<div class="gallery__photo slideshow"
-				data-cycle-fx='carousel'
-				data-cycle-timeout='1000'>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
-			<img src="i/gallery/1.jpg">
-		</a></div>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
-			<img src="i/gallery/2.jpg">
-		</a></div>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/3.jpg">
-			<img src="i/gallery/3.jpg">
-		</a></div>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/4.jpg">
-			<img src="i/gallery/4.jpg">
-		</a></div>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/5.jpg">
-			<img src="i/gallery/5.jpg">
-		</a></div>
-		<div><a class="fancybox" rel='gallery' href="i/gallery/6.jpg">
-			<img src="i/gallery/6.jpg">
-		</a></div>
-		<div class="gallery__photo__hide">
-			<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
-				<img src="i/gallery/1.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
-				<img src="i/gallery/2.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/3.jpg">
-				<img src="i/gallery/3.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/4.jpg">
-				<img src="i/gallery/4.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/5.jpg">
-				<img src="i/gallery/5.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/6.jpg">
-				<img src="i/gallery/6.jpg">
-			</a></div>
-		</div>
-		<div class="gallery__photo__show__iphone">
-			<div><a class="fancybox" rel='gallery' href="i/gallery/1.jpg">
-				<img src="i/gallery/1.jpg">
-			</a></div>
-			<div><a class="fancybox" rel='gallery' href="i/gallery/2.jpg">
-				<img src="i/gallery/2.jpg">
-			</a></div>
+	<div class="gallery__photo js-gallery-photo">
+		<div class="js-gallery-photo-pager">
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
 		</div>
 	</div>
 	<!-- CONTENT END -->
@@ -203,9 +170,6 @@
 <script type="text/javascript" src="js/jquery.cycle2.carousel.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle2.swipe.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="js/ios6fix.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
