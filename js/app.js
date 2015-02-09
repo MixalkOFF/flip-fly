@@ -65,10 +65,11 @@ app.handlers =
 	sliderTypographyHandler: function()
 	{
 		var width = parseInt(app.i.slider_typography.css('width'))/3;
-		if (app.i.body_width > 680) app.i.slider_typography_li.css({
+		if (app.i.body_width) app.i.slider_typography_li.css({
 			height: width + 'px',
 			width: width + 'px'
 		});
+		else app.i.slider_typography.css('height', app.i.body.height);
 	},
 	galleryImageHandler: function()
 	{
