@@ -190,3 +190,12 @@ app.init = function()
 $(function() {
 	app.init();
 });
+
+
+$('.js-popup-open').click(function(){
+		$('.js-popup').css('display', 'block');
+	});
+
+	$('.js-popup-close').click(function(){
+		$('.js-popup').css('display', 'none');
+	});
