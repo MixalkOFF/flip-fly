@@ -69,6 +69,10 @@ app.handlers =
 			height: width + 'px',
 			width: width + 'px'
 		});
+		if((typeof $('cycle-slideshow') !=="undefined")){
+		if (app.i.body_width) app.i.slider_typography_li.css({
+			height: width + 'px'
+		});}
 		else app.i.slider_typography.css('height', app.i.body.height);
 	},
 	galleryImageHandler: function()

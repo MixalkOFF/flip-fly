@@ -350,6 +350,7 @@ p {
 	color: #ccc;
 	font-size: 4em;
 	font-weight: 300;
+	padding-bottom: 0.8em;
 }
 .mode__time__dash:after {
 	display: block;
@@ -941,7 +942,7 @@ p {
 	padding-bottom: 10px;
 }
 .direction {
-	height: 30em;
+	height: 34em;
 } 
 .direction__img {
 	background: url('../i/direction__img.jpg') no-repeat 0 0;
@@ -1007,7 +1008,7 @@ p {
 	text-transform: uppercase;
 	font-weight: 800;
 	text-align: center;
-	padding-top: 4em;
+	padding-top: 1em;
 }
 .typography__price td {
 	padding: 1em;
