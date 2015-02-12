@@ -103,47 +103,56 @@
 	<div class="gallery__page__title">
 		<div class="gallery__page__title__caption">harley davidson</div>
 	</div>
-	<div class="slider cycle-slideshow">
-		<div class="slider__box js-slider">
-			<ul class="cycle-slideshow"
-					data-cycle-slides="li"
-					data-cycle-fx="scrollHorz"
-					data-cycle-timeout="0"
-					data-cycle-prev=".cycle-prev"
-					data-cycle-next=".cycle-next"
-					data-cycle-pager=".js-gallery-photo-pager"
-					data-cycle-pager-template="">
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-				<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
-			</ul>
-			<a href="javascript:void(0);" class="cycle-prev slider__button"></a>
-			<a href="javascript:void(0);" class="cycle-next slider__button"></a>
+	<div class="gallery__wrapper">
+		<div class="slider cycle-slideshow slider__gallery">
+			<div class="slider__box js-slider">
+				<ul class="cycle-slideshow"
+						data-cycle-slides="li"
+						data-cycle-fx="scrollHorz"
+						data-cycle-timeout="0"
+						data-cycle-prev=".cycle-prev"
+						data-cycle-next=".cycle-next"
+						data-cycle-pager=".js-gallery-photo-pager"
+						data-cycle-pager-template="">
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+					<li style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');" class="slider__box__in"></li>
+				</ul>
+				<a href="javascript:void(0);" class="cycle-prev slider__button"></a>
+				<a href="javascript:void(0);" class="cycle-next slider__button"></a>
+			</div>
 		</div>
-	</div>
-	<div class="gallery__photo js-gallery-photo">
-		<div class="js-gallery-photo-pager">
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
-			<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+		<div class="gallery__photo js-gallery-photo">
+			<div class="js-gallery-photo-pager slideshow vertical"
+					data-cycle-fx="carousel"
+					data-cycle-timeout="0"
+					data-cycle-next=".cycle-next"
+					data-cycle-prev=".cycle-prev"
+					data-cycle-pager=".js-gallery-photo-pager"
+					data-cycle-carousel-visible="2"
+					data-cycle-carousel-vertical="true">
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+				<a href="javascript:void(0);" class="gallery__photo__anchor" style="background-image: url('i/gallery__in/gallery__inside__slider.jpg');"></a>
+			</div>
 		</div>
 	</div>
 	<!-- CONTENT END -->
