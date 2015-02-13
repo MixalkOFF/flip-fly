@@ -6,6 +6,7 @@ app.i =
 	body_font_size: 10,
 	slider: {},
 	slider_typography: {},
+	slider_gallery: {},
 	slider_typography_li: {},
 	slider_down: {},
 	menu: {},
@@ -37,6 +38,7 @@ app.handlers =
 			app.handlers.bodyHandler();
 			app.handlers.headerMenuHandler();
 			app.handlers.sliderHandler();
+			app.handlers.sliderGalleryHandler();
 			app.handlers.sliderTypographyHandler();
 			app.handlers.blockTableHandler();
 			app.handlers.galleryImageHandler();
@@ -61,6 +63,11 @@ app.handlers =
 	{
 		if (app.i.body_width > 680) app.i.slider.css('height', app.i.body_height);
 		else app.i.slider.css('height', app.i.body_height / 2);
+	},
+	sliderGalleryHandler: function()
+	{
+		if (app.i.body_width > 680) app.i.slider_gallery.css('height', app.i.body_height - 74 + 'px');
+		else app.i.slider_gallery.css('height', app.i.body_height);
 	},
 	sliderTypographyHandler: function()
 	{
@@ -91,7 +98,11 @@ app.handlers =
 		var
 			gallery_width = parseInt(app.i.gallery_photo.css('width')),
 			width;
-		app.i.gallery_photo_div.css('width', (gallery_width + 10) + 'px');
+			app.i.gallery_photo_div.css('width', (gallery_width + 10) + 'px');
+		var
+			gallery_height = parseInt(app.i.gallery_photo.css('height')),
+			height;
+			app.i.gallery_photo_div.css('height', (app.i.body_height - 74) + 'px');
 		if (app.i.body_width < 680)
 		{
 			width = gallery_width / 4;
@@ -173,6 +184,7 @@ app.init = function()
 {
 	app.i.body = $('body');
 	app.i.slider = $('.js-slider');
+	app.i.slider_gallery = $('.js-slider-gallery');
 	app.i.slider_typography = $('.js-slider-typography');
 	app.i.slider_typography_li = app.i.slider_typography.find('li');
 	app.i.slider_down = $('.js-slider-down');
@@ -203,3 +215,18 @@ $('.js-popup-open').click(function(){
 $('.js-popup-close').click(function(){
 	$('.js-popup').css('display', 'none');
 });
+
+function marginMove(order, id) {
+ var step = 10;
+ var moveAnchor;
+ if (!(moveAnchor = document.getElementByName('gallery__photo__anchor'))) return;
+ var top = moveAnchor.style.marginTop ? parseInt(moveAnchor.style.marginTop) : 0;
+ switch (order) {
+	case "up" :
+		moveAnchor.style.marginTop = (top - step) + "px";
+		break;
+	case "down" :
+		moveAnchor.style.marginTop = (top + step) + "px";
+ }
+ return false;
+}

@@ -91,6 +91,7 @@ p {
 .wrapper {
 	box-sizing: border-box;
 	padding-left: 24em;  /* 28em --> 24em */
+	height: 100%;  /* add height */
 }
 .clear {
 	display: block;
@@ -817,6 +818,10 @@ p {
 /* BLOCK TABLE END */
 
 /* GALLERY */
+.gallery__wrapper {
+	height: 100%;
+	margin-bottom: -74px;
+}
 .gallery__page__title {
 	height: 5em; /* 10em --> 5em */
 	background: #1d1d1d;
@@ -864,12 +869,9 @@ p {
 	display: block;
 	background-size: cover;
 	background-position: 50% 50%;
-	/* delete float */
-	/* add */
 	position: relative;
 	width: 100%;
-	height: 10em;
-	background-size: cover;
+	height: 20%;
 }
 .gallery__photo__show__iphone {
 	display: none;
