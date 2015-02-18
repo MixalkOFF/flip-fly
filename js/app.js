@@ -98,11 +98,10 @@ app.handlers =
 		var
 			gallery_width = parseInt(app.i.gallery_photo.css('width')),
 			width;
-			app.i.gallery_photo_div.css('width', (gallery_width + 10) + 'px');
 		var
 			gallery_height = parseInt(app.i.gallery_photo.css('height')),
 			height;
-			app.i.gallery_photo_div.css('height', (app.i.body_height - 74) + 'px');
+		app.i.gallery_photo_div.css('height', (app.i.body_height - 74) + 'px');
 		if (app.i.body_width < 680)
 		{
 			width = gallery_width / 4;
@@ -197,7 +196,7 @@ app.init = function()
 	app.i.block_table_anchors = app.i.block_table_items.find('.js-anchor');
 	app.i.gallery_image = $('.js-gallery-image');
 	app.i.gallery_photo = $('.js-gallery-photo');
-	app.i.gallery_photo_div = app.i.gallery_photo.find('.js-gallery-photo-pager');
+	app.i.gallery_photo_div = app.i.gallery_photo;
 	app.i.gallery_photo_anchor = app.i.gallery_photo.find('');
 	if (app.isMobile.any()) app.i.body.addClass('mobile');
 	app.handlers.init();
@@ -216,17 +215,36 @@ $('.js-popup-close').click(function(){
 	$('.js-popup').css('display', 'none');
 });
 
-function marginMove(order, id) {
- var step = 10;
- var moveAnchor;
- if (!(moveAnchor = document.getElementByName('gallery__photo__anchor'))) return;
- var top = moveAnchor.style.marginTop ? parseInt(moveAnchor.style.marginTop) : 0;
- switch (order) {
-	case "up" :
-		moveAnchor.style.marginTop = (top - step) + "px";
-		break;
-	case "down" :
-		moveAnchor.style.marginTop = (top + step) + "px";
- }
- return false;
-}
+$(function(){
+	var gallery = $('.js-gallery-photo-pager'),
+		gallery_photo_height = parseInt(gallery.find('> div:eq(0)').css('height')),
+		gallery_up = $('.js-gallery__photo__up'),
+		gallery_down = $('.js-gallery__photo__down'),
+		page = 1,
+		maxPage = gallery.find('>div').length / 5,
+		status = true;
+	gallery_up.click(function(){
+		if (page < maxPage && status) {
+			status = false;
+			gallery.animate({
+				"marginTop": '-' + ((gallery_photo_height * 5) * page) + 'px'
+			}, 1000);
+			page++;
+			setTimeout(function(){
+				status = true;
+			}, 1010);
+		}
+	});
+	gallery_down.click(function(){
+		if (page > 1 && status) {
+			status = false;
+			page--;
+			gallery.animate({
+				"marginTop": '-' + ((gallery_photo_height * 5) * (page - 1)) + 'px'
+			}, 1000);
+			setTimeout(function(){
+				status = true;
+			}, 1010);
+		}
+	});
+});
