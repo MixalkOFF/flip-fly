@@ -224,18 +224,6 @@ $(function(){
 		maxPage = gallery.find('>div').length / 5,
 		status = true;
 	gallery_up.click(function(){
-		if (page < maxPage && status) {
-			status = false;
-			gallery.animate({
-				"marginTop": '-' + ((gallery_photo_height * 5) * page) + 'px'
-			}, 1000);
-			page++;
-			setTimeout(function(){
-				status = true;
-			}, 1010);
-		}
-	});
-	gallery_down.click(function(){
 		if (page > 1 && status) {
 			status = false;
 			page--;
@@ -247,4 +235,35 @@ $(function(){
 			}, 1010);
 		}
 	});
+	gallery_down.click(function(){
+	if (page < maxPage && status) {
+			status = false;
+			gallery.animate({
+				"marginTop": '-' + ((gallery_photo_height * 5) * page) + 'px'
+			}, 1000);
+			page++;
+			setTimeout(function(){
+				status = true;
+			}, 1010);
+		}
+	});
 });
+
+var time = new Date();
+//alert(time.getHours());
+a=Math.floor((Math.random() * 3) + 1);
+
+if ((time.getHours()<=22 && time.getMinutes()<=30 && time.getHours()>=8) || (time.getHours()<23 && time.getHours()>=8) || (time.getHours()>=7 && time.getHours()<=30 && time.getHours()<=22)){
+	b=(time.getHours() %10 )+23;
+	$('.header__loader__line__in').width(b+"%");
+	$('.header__loader__line__in').css('backgroundColor', '#6FC5D8')
+	$('.header__loader__caption').html("Сейчас центр загружен на "+b+"%" );
+
+}
+else
+{
+	b=0;
+	$('.header__loader__line__in').width(b+"%");
+	$('.header__loader__caption').html("Сейчас центр загружен на "+b+"%" );
+
+}
